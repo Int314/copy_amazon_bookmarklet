@@ -1,0 +1,13 @@
+{
+  "name": "copy_amazon_info_bookmarklet",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "google-closure-compiler --js src/main.js --js_output_file dist/main.min.js && echo \"javascript:(function(){\" | cat - dist/main.min.js > dist/temp && mv dist/temp dist/main.min.js && echo \";})();\" >> dist/main.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-closure-compiler": "^20240317.0.0"
+  }
+}
